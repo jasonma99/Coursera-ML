@@ -24,15 +24,11 @@ sigma = zeros(1, size(X, 2));
 %               each feature. 
 %
 % Hint: You might find the 'mean' and 'std' functions useful.
-%       
+%      
+mu = mean(X,1);
+sigma = std(X,1);
 
-
-
-
-
-
-
-
+X_norm = (X-mu)./sigma;
 
 % ============================================================
 

@@ -13,9 +13,17 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
+sum = 0;
 
+for i = 1:m
+  h = X(i, :) * theta;
+  % fprintf('value of h: %f\n', h);
+  sum += (h-y(i))^2;
+  % fprintf('value of sum: %f\n',sum);
+  
+end
 
-
+J = 1/(2*m) *sum
 
 % =========================================================================
 
